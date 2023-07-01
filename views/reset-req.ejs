@@ -1,0 +1,21 @@
+<%- include('header') %>
+
+  <form action="/reset-password/<%= id %>" method="POST">
+    <div class="reset">
+      <img src="/images/logo-black.png" alt="" srcset="">
+      <h4>Password Reset</h4>
+    </div>
+    <label for="currentPassword">Current Password:</label>
+    <input type="password" id="currentPassword" name="currentPassword" required><br><br>
+
+    <label for="newPassword">New Password:</label>
+    <input type="password" id="newPassword" name="newPassword" required><br><br>
+
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+    <input type="submit" value="Reset Password">
+  </form>
+  </body>
+
+  </html>

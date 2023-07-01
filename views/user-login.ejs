@@ -1,0 +1,28 @@
+<%- include('header') %>
+<body>
+  <div class="log-form">
+    <% if (successMessage || loginMessage) { %>
+      <div class="success-message">
+        <% if (successMessage) { %>
+          <%= successMessage %>
+        <% } else if (loginMessage) { %>
+          <%= loginMessage %>
+        <% } %>
+      </div>
+    <% } %>
+    <form action="/login" method="POST">
+      <img src="/images/logo-black.png" alt="" srcset="">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      
+      <input type="submit" value="Login">
+    </form>
+    <div class="forgot">
+      <a href="/password-reset">Forgot Password?</a>
+    </div>
+  </div>
+</body>
+</html>

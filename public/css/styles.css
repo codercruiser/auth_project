@@ -1,0 +1,132 @@
+body {
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #ffffff2d;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="number"],
+input[type="file"],
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"],
+button {
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  align-self: center;
+}
+
+.toggle-password {
+  position: relative;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: #0066cc;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+.user-info {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.logo-container img,
+.reset img {
+  width: 80px;
+  border-radius: 15%;
+  position: relative;
+  text-align: center;
+  left: 110px;
+  bottom: 20px;
+}
+
+.logo-container img {
+  left: 145px;
+}
+
+#message {
+  display: none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 10px;
+  margin-top: 10px;
+  width: 160px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+#message p {
+  padding: 5px;
+  font-size: 14px;
+}
+
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+  content: "✅";
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "👎🏻";
+}

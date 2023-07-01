@@ -1,0 +1,27 @@
+<%- include('header') %>
+
+<body>
+  <div class="container">
+    <form action="/profile-reset" method="POST">
+      <div class="user-info">
+        <div class="logo-container">
+          <img src="/images/logo-black.png" alt="" srcset="">
+        </div>
+        <h2>User Information</h2>
+        <ul>
+          <li><strong>Name:</strong> <%= user.name %></li>
+          <li><strong>Age:</strong> <%= user.age %></li>
+          <li><strong>Address:</strong> <%= user.address %></li>
+          <li><strong>Documents:</strong> <%= user.documents %></li>
+          <li><strong>Username:</strong> <%= user.username %></li>
+          <li><strong>Email:</strong> <%= user.email %></li>
+        </ul>
+      </div>
+      <div>
+        <button type="submit">Update profile</button>
+        <a href="/logout">Logout</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
