@@ -78,6 +78,15 @@ button {
   padding: 10px;
 }
 
+body img{
+  width: 80px;
+  border-radius: 15%;
+  position: relative;
+  text-align: center;
+  left: 60px;
+  bottom: 20px;
+}
+
 .logo-container img,
 .reset img {
   width: 80px;

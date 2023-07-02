@@ -1,3 +1,5 @@
+require('dotenv').config()
+console.log(process.env)
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -10,7 +12,7 @@ const path = require('path');
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb+srv://samuel:U18me1085@cluster0.obz0x78.mongodb.net/?retryWrites=true&w=majority', {
+  .connect(process.env.DB_STORE, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -38,7 +40,7 @@ const User = mongoose.model('User', userSchema);
 
 // Configure session storage
 const store = new MongoDBStore({
-  uri: 'mongodb+srv://samuel:U18me1085@cluster0.obz0x78.mongodb.net/?retryWrites=true&w=majority',
+  uri:process.env.DB_STORE,
   collection: 'sessions',
 });
 
